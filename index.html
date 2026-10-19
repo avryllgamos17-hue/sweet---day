@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sweet Day</title>
+  <meta name="description" content="Little daily reminders, made with love.">
+  <meta name="theme-color" content="#fdf1f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1d1220" media="(prefers-color-scheme: dark)">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Sweet Day">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Quicksand:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <p class="date" id="date"></p>
+      <h1 class="greeting" id="greeting">Hello, my love</h1>
+      <div class="progress">
+        <p class="progress-text" id="progressText"></p>
+        <div class="bar" id="bar" role="progressbar" aria-label="Reminders done today" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span id="barFill"></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="hero" aria-label="Next reminder"></section>
+
+    <section class="card notif" id="notif" aria-label="Notifications"></section>
+
+    <section class="note" id="note" aria-label="Today's love note"></section>
+
+    <section class="day" aria-label="Today's reminders">
+      <h2 class="section-title">Your day, with love</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <footer class="foot">Made with love, just for you.</footer>
+  </main>
+
+  <noscript><p style="padding:16px">Sweet Day needs JavaScript turned on to show your reminders.</p></noscript>
+
+  <script src="reminders.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
